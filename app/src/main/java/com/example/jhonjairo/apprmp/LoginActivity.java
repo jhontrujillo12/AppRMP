@@ -29,6 +29,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.auth.api.Auth;
@@ -56,6 +57,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     SignInButton signInButton;
     Button signOutButton;
     TextView statusTextView;
+    ImageView imageView;
     GoogleApiClient mGoogleApiClient;
     private static final String TAG = "SignInActivity";
     private static final int RC_SIGN_IN = 9001;
@@ -79,6 +81,9 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
 
         signOutButton = (Button) findViewById(R.id.signOutButton);
         signOutButton.setOnClickListener(this);
+
+        imageView = findViewById(R.id.imageViewRMP);
+        imageView.setImageResource(R.drawable.imagenprincipal);
     }
 
     public void onClick(View v) {
@@ -111,7 +116,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         Log.d(TAG, "handleSignInResult:" + result.isSuccess());
         if (result.isSuccess()) {
             GoogleSignInAccount acct = result.getSignInAccount();
-            statusTextView.setText("Hellow, " + acct.getDisplayName());
+            statusTextView.setText("Bienvenid@, " + acct.getDisplayName());
         }
         else {
         }
@@ -129,10 +134,6 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             }
         });
     }
-
-
-
-
 
     public void sendMessage(View view) {
         Intent intent = new Intent(this, MainActivity.class);
