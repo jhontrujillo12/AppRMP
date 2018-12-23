@@ -4,8 +4,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -37,6 +39,27 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     private static final String TAG = "SignInActivity";
     private static final int RC_SIGN_IN = 9001;
 
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.navigation_home:
+
+                    return true;
+                case R.id.navigation_dashboard:
+                    signOut();
+
+                    return true;
+                case R.id.navigation_notifications:
+
+                    return true;
+            }
+            return false;
+        }
+    };
+
     /**
      *
      * @param savedInstanceState
@@ -55,6 +78,8 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 .build();
 
         inicializarComponentes();
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
 
 
@@ -68,9 +93,6 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         switch (v.getId()) {
             case R.id.sign_in_button:
                 signIn();
-                break;
-            case R.id.signOutButton:
-                signOut();
                 break;
         }
     }
@@ -104,9 +126,9 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             Context context = getApplicationContext();
             CharSequence text = "Bienvenid@: " + acct.getDisplayName();
             int duration = Toast.LENGTH_SHORT;
-
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
+
             statusTextView.setText("Inicio Sesión: " + acct.getDisplayName());
             progressBar.setVisibility(View.INVISIBLE);
 
@@ -142,6 +164,14 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             @Override
             public void onResult(@NonNull Status status) {
                 statusTextView.setText("Fin Sesión");
+
+                Context context = getApplicationContext();
+                CharSequence text = "Ha cerrado la sesión";
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+
+                progressBar.setVisibility(View.INVISIBLE);
             }
         });
     }
@@ -161,8 +191,6 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         signInButton = (SignInButton) findViewById(R.id.sign_in_button);
         signInButton.setOnClickListener(this);
 
-        signOutButton = (Button) findViewById(R.id.signOutButton);
-        signOutButton.setOnClickListener(this);
 
         imageView = findViewById(R.id.imageViewRMP);
         imageView.setImageResource(R.drawable.imagenprincipal);
