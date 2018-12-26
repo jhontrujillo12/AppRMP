@@ -36,6 +36,10 @@
         <activity
             android:name=".DeviceListActivity"
             android:theme="@android:style/Theme.DeviceDefault.Dialog" />
+        <activity
+            android:name=".AlmuerzosActivity"
+            android:label="@string/title_activity_almuerzos"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

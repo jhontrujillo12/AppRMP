@@ -181,7 +181,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
      * @param
      */
     public void sendMessage() {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, AlmuerzosActivity.class);
         startActivity(intent);
 
     }
