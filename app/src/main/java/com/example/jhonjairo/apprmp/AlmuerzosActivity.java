@@ -29,10 +29,32 @@ import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
 
 public class AlmuerzosActivity extends AppCompatActivity {
 
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+    private ViewPagerAdapter adapter;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_almuerzos);
+
+        tabLayout = (TabLayout) findViewById(R.id.tablayout_id);
+        viewPager = (ViewPager) findViewById(R.id.viewpager_id);
+        adapter = new ViewPagerAdapter(getSupportFragmentManager());
+
+        //Se agregan los fragment
+        adapter.addFragment(new AlmuerzosFragment(), "");
+        adapter.addFragment(new CartaFragment(), "");
+        adapter.addFragment(new BebidasFragment(), "");
+        adapter.addFragment(new OtrosFragment(), "");
+        viewPager.setAdapter(adapter);
+        tabLayout.setupWithViewPager(viewPager);
+
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_restaurant_black_24dp);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_chrome_reader_mode_black_24dp);
+        tabLayout.getTabAt(2).setIcon(R.drawable.ic_local_drink_black_24dp);
+        tabLayout.getTabAt(3).setIcon(R.drawable.ic_local_cafe_black_24dp);
 
     }
 
