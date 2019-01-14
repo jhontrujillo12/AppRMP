@@ -7,4 +7,10 @@
     tools:layout_editor_absoluteX="8dp"
     tools:layout_editor_absoluteY="61dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/textViewCarta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Carta" />
 </LinearLayout>
