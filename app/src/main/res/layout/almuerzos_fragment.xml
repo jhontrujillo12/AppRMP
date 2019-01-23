@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="casual"
-        android:text=" Menu 1"
+        android:text="@string/title_activity_almuerzos_menu1"
         android:textColor="@color/design_default_color_primary"
         android:textColorLink="@color/design_default_color_primary"
         android:textSize="24sp" />
@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="casual"
-            android:text="Sopa:"
+            android:text="@string/title_activity_almuerzos_sopa"
             android:textColor="@color/common_google_signin_btn_text_dark_focused"
             android:textSize="14sp" />
         <Space
@@ -70,7 +70,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="casual"
-            android:text="CarnePrincipio:"
+            android:text="@string/title_activity_almuerzos_carne"
             android:textColor="@color/common_google_signin_btn_text_dark_focused"
             android:textSize="14sp" />
         <Space
@@ -79,7 +79,7 @@
             android:layout_weight="1" />
 
         <TextView
-            android:id="@+id/textView14"
+            android:id="@+id/textViewCarneMenu1Recibido"
             android:layout_width="295dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -91,18 +91,9 @@
         android:layout_height="wrap_content">
 
         <Space
-            android:layout_width="35dp"
+            android:layout_width="29dp"
             android:layout_height="match_parent"
             android:layout_weight="1" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="casual"
-            android:text="Sopa:"
-            android:textColor="@color/common_google_signin_btn_text_dark_focused"
-            android:textSize="14sp" />
 
         <Space
             android:layout_width="28dp"
@@ -110,14 +101,23 @@
             android:layout_weight="1" />
 
         <TextView
-            android:id="@+id/textView16"
+            android:id="@+id/textViewEnsaladaMenu1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="@string/title_activity_almuerzos_ensalada"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textViewEnsaladaMenuRecibido"
             android:layout_width="295dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="TextView" />
 
         <TextView
-            android:id="@+id/textView17"
+            android:id="@+id/textViewEspacio1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:height="30dp"

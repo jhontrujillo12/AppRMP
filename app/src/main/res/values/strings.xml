@@ -22,8 +22,12 @@
     <string name="title_exit">Salir</string>
 
     <!-- String related with Menu -->
-    <string name="title_activity_almuerzos">AlmuerzosActivity</string>
-    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_almuerzos_menu1">Menu 1</string>
+    <string name="title_activity_almuerzos_sopa">Sopa:</string>
+    <string name="title_activity_almuerzos_carne">Carne:</string>
+    <string name="title_activity_almuerzos_ensalada">Ensalda:</string>
+    <string name="title_activity_almuerzos">Almuerzos:</string>
+
 
 
 
