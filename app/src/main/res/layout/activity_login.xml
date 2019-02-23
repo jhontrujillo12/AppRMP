@@ -3,48 +3,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     tools:context=".LoginActivity">
 
-    <LinearLayout
-            android:id="@+id/email_login_form"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="109dp" />
+    <ImageView
+        android:id="@+id/imageViewRMP"
+        android:layout_width="wrap_content"
+        android:layout_height="448dp"
+        android:contentDescription="TODO"
+        android:visibility="visible" />
 
-           <ImageView
-                android:id="@+id/imageViewRMP"
-                android:layout_width="match_parent"
-                android:layout_height="279dp"
-                android:visibility="visible" />
 
-            <com.google.android.gms.common.SignInButton
-                android:id="@+id/sign_in_button"
-                android:layout_width="match_parent"
-                android:layout_height="61dp"></com.google.android.gms.common.SignInButton>
-
-        <ProgressBar
-            android:id="@+id/simpleProgressBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/email_login_form"
-            android:layout_centerHorizontal="true"
-            android:visibility="invisible" />
-    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/simpleProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/status_textview"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:gravity="center"
         android:text="" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"></com.google.android.gms.common.SignInButton>
+
+    <Space
+        android:layout_width="411dp"
+        android:layout_height="50dp" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
@@ -54,6 +49,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/navigation" />
+        app:menu="@menu/navigation" >
+
+
+    </android.support.design.widget.BottomNavigationView>
 
 </LinearLayout>
