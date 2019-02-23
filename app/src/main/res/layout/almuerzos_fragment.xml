@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#FFFFFF"
     tools:layout_editor_absoluteX="8dp"
     tools:layout_editor_absoluteY="61dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
@@ -131,7 +132,7 @@
 
         <TextView
             android:id="@+id/textView9"
-            android:layout_width="379dp"
+            android:layout_width="427dp"
             android:layout_height="match_parent"
             android:height="36dp"
             android:background="#1F000000"
@@ -192,7 +193,7 @@
 
         <Button
             android:id="@+id/button4"
-            android:layout_width="wrap_content"
+            android:layout_width="204dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Descripción"
@@ -329,7 +330,7 @@
 
         <TextView
             android:id="@+id/textView9"
-            android:layout_width="379dp"
+            android:layout_width="425dp"
             android:layout_height="match_parent"
             android:height="36dp"
             android:background="#1F000000"
@@ -389,7 +390,7 @@
 
         <Button
             android:id="@+id/button4"
-            android:layout_width="wrap_content"
+            android:layout_width="194dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Descripción"
