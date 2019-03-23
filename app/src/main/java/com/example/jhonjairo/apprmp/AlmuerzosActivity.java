@@ -51,10 +51,10 @@ public class AlmuerzosActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
 
-        tabLayout.getTabAt(0).setIcon(R.drawable.ic_restaurant_black_24dp);
-        tabLayout.getTabAt(1).setIcon(R.drawable.ic_chrome_reader_mode_black_24dp);
-        tabLayout.getTabAt(2).setIcon(R.drawable.ic_local_drink_black_24dp);
-        tabLayout.getTabAt(3).setIcon(R.drawable.ic_local_cafe_black_24dp);
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_caja_de_almuerzo);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_menu);
+        tabLayout.getTabAt(2).setIcon(R.drawable.ic_mojito);
+        tabLayout.getTabAt(3).setIcon(R.drawable.ic_palomitas_de_maiz);
 
     }
 
