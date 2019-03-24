@@ -10,12 +10,11 @@
     android:orientation="vertical">
 
     <android.support.design.widget.TabLayout
+        android:id="@+id/tablayout_id"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:tabMode="fixed"
+        android:layout_height="84dp"
         app:tabGravity="fill"
-        android:id="@+id/tablayout_id">
-    </android.support.design.widget.TabLayout>
+        app:tabMode="fixed"></android.support.design.widget.TabLayout>
 
 
 
